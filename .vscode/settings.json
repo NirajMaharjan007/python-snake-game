@@ -1,0 +1,15 @@
+{
+    "cSpell.words": [
+        "pygame"
+    ],
+    "files.exclude": {
+        "__pycache__": true,
+        "**/__pycache__": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    }
+}

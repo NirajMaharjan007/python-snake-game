@@ -3,8 +3,9 @@ import numpy as np
 
 
 class Snake:
-    x = np.array([])
-    y = np.array([])
+    # x = np.array([])
+    # y = np.array([])
+    x = y = 50
     __size = 30
     __direction = 'r'
     __speed = 0.85

@@ -3,8 +3,7 @@ from random import randint
 
 
 class Apple:
-    apple_x = apple_y = 0
-    __size = 12
+    __size = 10
 
     def __init__(self, screen):
         self.screen = screen
@@ -13,11 +12,19 @@ class Apple:
 
     def render(self):
         color = (235, 69, 95)
-        # Apple.set_apple(self)
         pg.draw.circle(self.screen, color, (self.apple_x,
                        self.apple_y), self.__size)
 
-    @staticmethod
-    def set_apple(self):
-        self.apple_x = randint(1, 750)
-        self.apple_y = randint(1, 550)
+    def collision(self, x, y):
+        snake = pg.Rect(x, y, 30, 30)
+        apple = pg.Rect(self.apple_x, self.apple_y, 15, 15)
+
+        global collide
+        collide = pg.Rect.colliderect(snake, apple)
+
+        if collide:
+            self.apple_x = randint(1, 600)
+            self.apple_y = randint(1, 500)
+
+    def get_collision(self):
+        return collide

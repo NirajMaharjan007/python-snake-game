@@ -12,22 +12,17 @@ class Snake:
                     [50, 50],
                     [50, 50]
                     ]
-    __length = __counter = 100
+    __length = 100
 
     def __init__(self, screen):
         self.screen = screen
 
     def __move(self):
-        print(self.__snake_position[0], self.__snake_position[1])
-        pg.draw.circle(self.screen, (235, 69, 95), (50, 50), 10)
         self.__snake_body.insert(0, list(self.__snake_position))
         if self.__length < 0:
             self.__snake_body.pop()
             if self.__length == 1:
-                self.__length = self.__counter
-
-            elif self.__snake_position[0] == 40 and self.__snake_position[1] == 40:
-                self.__length += self.__counter
+                self.__length = 100
 
         self.__length -= 1
 
@@ -83,3 +78,9 @@ class Snake:
 
         pg.draw.rect(self.screen, green_color, pg.Rect(
             self.__snake_position[0], self.__snake_position[1], self.__size, self.__size))
+
+    def get_x(self):
+        return self.__snake_position[0]
+
+    def get_y(self):
+        return self.__snake_position[1]

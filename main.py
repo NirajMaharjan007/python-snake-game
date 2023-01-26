@@ -1,7 +1,7 @@
 import pygame as pg
 from os import system
 from entity.snake import Snake
-
+from entity.apple import Apple
 
 system("clear")
 system("python --version")
@@ -12,7 +12,7 @@ screen = pg.display.set_mode((800, 600))
 pg.display.set_caption("My Game")
 
 snake = Snake(screen)
-
+apple = Apple(screen)
 
 running = True
 
@@ -23,5 +23,7 @@ while running:
             running = False
 
     snake.render()
+    apple.render()
+
     pg.display.flip()
     pg.display.update()

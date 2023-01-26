@@ -1,4 +1,5 @@
 import pygame as pg
+from entity.apple import Apple
 
 
 class Snake:
@@ -11,7 +12,6 @@ class Snake:
                     [80, 50],
                     [70, 50]
                     ]
-    __length = 5
 
     def __init__(self, screen):
         self.screen = screen
@@ -30,6 +30,14 @@ class Snake:
             self.__snake_position[1] += self.__speed
 
         self.__snake_body.insert(0, list(self.__snake_position))
+
+        print("Snake:", self.__snake_position[0], self.__snake_position[1])
+        print("Apple:", Apple.apple_x, Apple.apple_y)
+
+        if self.__snake_position[0] == Apple.apple_x and self.__snake_position[1] == Apple.apple_y:
+            Apple.set_apple()
+        else:
+            self.__snake_body.pop()
 
     def __update(self):
         if self.__snake_position[0] > 800:

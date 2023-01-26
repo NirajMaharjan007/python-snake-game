@@ -8,8 +8,8 @@ class Apple:
 
     def __init__(self, screen):
         self.screen = screen
-        self.apple_y = randint(1, 800)
-        self.apple_x = randint(1, 600)
+        self.apple_x = randint(1, 750)
+        self.apple_y = randint(1, 550)
 
     def render(self):
         color = (235, 69, 95)
@@ -19,5 +19,5 @@ class Apple:
 
     @staticmethod
     def set_apple(self):
-        self.apple_y = randint(1, 750)
-        self.apple_x = randint(1, 550)
+        self.apple_x = randint(1, 750)
+        self.apple_y = randint(1, 550)

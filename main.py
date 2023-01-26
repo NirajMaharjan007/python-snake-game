@@ -1,7 +1,6 @@
 import pygame as pg
 from os import system
-from entity.snake import Snake
-from entity.apple import Apple
+from logic import Logic
 
 system("clear")
 system("python --version")
@@ -11,10 +10,9 @@ pg.init()
 screen = pg.display.set_mode((800, 600))
 pg.display.set_caption("My Game")
 
-snake = Snake(screen)
-apple = Apple(screen)
-
 running = True
+
+logic = Logic(screen)
 
 while running:
     screen.fill((55, 70, 80))
@@ -22,8 +20,6 @@ while running:
         if event.type == pg.QUIT:
             running = False
 
-    snake.render()
-    apple.render()
-
+    logic.render()
     pg.display.flip()
     pg.display.update()

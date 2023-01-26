@@ -11,4 +11,4 @@ class Logic:
 
     def render(self):
         self.snake.render()
-        self.apple.render()
+        # self.apple.render()

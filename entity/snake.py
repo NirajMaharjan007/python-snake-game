@@ -8,7 +8,7 @@ class Snake:
     x = y = 50
     __size = 30
     __direction = 'r'
-    __speed = 0.85
+    __speed = 0.825
 
     def __init__(self, screen):
         self.screen = screen
@@ -61,5 +61,5 @@ class Snake:
         self.__update()
         self.__move()
         pg.draw.rect(self.screen, (150, 200, 0), pg.Rect(
-            round(self.x, 2), round(self.y, 2), self.__size, self.__size))
-        print(round(self.x, 2), round(self.y, 2))
+            round(self.x, 3), round(self.y, 3), self.__size, self.__size))
+        print(round(self.x, 3), round(self.y, 3))

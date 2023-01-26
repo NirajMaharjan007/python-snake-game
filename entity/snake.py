@@ -4,14 +4,14 @@ import pygame as pg
 class Snake:
     __size = 30
     __direction = 'r'
-    __speed = 1
+    __speed = 2
     __snake_position = [100, 50]
-    __snake_body = [[100, 50],
+    __snake_body = [[150, 50],
                     [90, 50],
                     [80, 50],
                     [70, 50]
                     ]
-    __length = 5
+    # __length = 5
 
     def __init__(self, screen):
         self.screen = screen

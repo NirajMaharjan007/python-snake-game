@@ -5,12 +5,12 @@ class Snake:
     __size = 30
     __direction = 'r'
     __speed = 1
-    __snake_position = [50, 50]
-    __snake_body = [[50, 50],
-                    [50, 50],
-                    [50, 50],
-                    [50, 50],
-                    [50, 50]
+    __snake_position = [110, 50]
+    __snake_body = [[100, 50],
+                    [90, 50],
+                    [80, 50],
+                    [70, 50],
+                    [60, 50]
                     ]
     __length = 100
 
